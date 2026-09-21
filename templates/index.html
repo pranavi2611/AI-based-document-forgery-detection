@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Document Forgery Detection</title>
+
+</head>
+
+<body>
+
+    <h1>AI Based Document Forgery Detection</h1>
+
+    <p>
+        Upload a document to check whether it is original or forged.
+    </p>
+
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+        <input
+            type="file"
+            name="document"
+            accept=".jpg,.jpeg,.png,.pdf"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Analyze Document
+        </button>
+
+    </form>
+
+</body>
+
+</html>

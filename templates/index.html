@@ -19,6 +19,9 @@
         Upload a document to check whether it is original or forged.
     </p>
 
+
+    <!-- Upload Form -->
+
     <form action="/analyze" method="POST" enctype="multipart/form-data">
 
         <input
@@ -35,6 +38,36 @@
         </button>
 
     </form>
+
+
+    <!-- Detection Result -->
+
+    {% if result %}
+
+        <hr>
+
+        <h2>Detection Result</h2>
+
+        <p>
+            <strong>File:</strong> {{ filename }}
+        </p>
+
+        <h3>
+            {{ result }}
+        </h3>
+
+        <p>
+            Forgery Probability:
+            <strong>{{ forgery_score }}%</strong>
+        </p>
+
+        <p>
+            Authenticity Probability:
+            <strong>{{ authenticity_score }}%</strong>
+        </p>
+
+    {% endif %}
+
 
 </body>
 
